@@ -22,7 +22,7 @@ exports.listIssues = async () => {
 
 exports.addIssue = async (title, description) => {
   if (!title || !description) {
-    console.log('%s', chalk.green(`2 Action arguments required`));
+    console.log('%s', chalk.red(`2 Action arguments required`));
     return;
   }
   const data = {title, description};
@@ -36,7 +36,7 @@ exports.addIssue = async (title, description) => {
 
 exports.deleteIssue = async (id) => {
   if (!id) {
-    console.log('%s', chalk.green(`1 Action arguments required`));
+    console.log('%s', chalk.red(`1 Action arguments required`));
     return;
   }
   try {
@@ -49,7 +49,7 @@ exports.deleteIssue = async (id) => {
 
 exports.updateIssue = async (id, title, description) => {
   if (!id) {
-    console.log('%s', chalk.green(`1 Action arguments required`));
+    console.log('%s', chalk.red(`1 Action arguments required`));
     return;
   }
   const data = {title, description};
